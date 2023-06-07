@@ -258,16 +258,6 @@ HuggingFace Neuronx Training Containers
 |------------------------------------------------------------------|-------------------|-----------|----------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 |PyTorch 1.13.0 with Neuronx Training and HuggingFace transformers |Neuronx 2.9.1      |training  |trn1                        |3.8 (py38)             |763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-training-neuronx:1.13.0-transformers4.28.1-neuronx-py38-sdk2.9.1-ubuntu20.04 |
 
-SageMaker Training Compiler Containers
-===============================
-
-| Framework                                     |Job Type	|CPU/GPU 	|Python Version Options	|Example URL																						|
-|-----------------------------------------------|-----------|-----------|-----------------------|---------------------------------------------------------------------------------------------------|
-| TensorFlow 2.10.0                              |training   |GPU        | 3.9 (py39)            | 763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-training:2.10.0-gpu-py39-cu112-ubuntu20.04-sagemaker     |
-|PyTorch 1.13.1 with SageMaker Training Compiler    |training	|GPU 		| 3.9 (py39 )			|763104351884.dkr.ecr.us-west-2.amazonaws.com/pytorch-trcomp-training:1.13.1-gpu-py39-cu117-ubuntu20.04-sagemaker     |
-|PyTorch 1.11.0 with HuggingFace transformers 4.21.1 and SageMaker Training Compiler    |training	|GPU 		| 3.8 (py38)			|763104351884.dkr.ecr.us-west-2.amazonaws.com/huggingface-pytorch-trcomp-training:1.11.0-transformers4.21.1-gpu-py38-cu113-ubuntu20.04      |
-
-
 Neuron Containers
 =================
 
@@ -280,6 +270,19 @@ Neuron Containers
 |Tensorflow 1.15.5  |tensorflow-neuron  |Neuron 2.8.0       |inference  |inf1                         |3.8 (py38)             |763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-inference-neuron:1.15.5-neuron-py38-sdk2.8.0-ubuntu20.04     |
 |MXNet 1.8.0        |mx_neuron          |Neuron 2.5.0       |inference  |inf1                         |3.8 (py38)             |763104351884.dkr.ecr.us-west-2.amazonaws.com/mxnet-inference-neuron:1.8.0-neuron-py38-sdk2.5.0-ubuntu20.04           |
 |PyTorch 1.13.1     |torch-neuronx      |Neuron 2.10.0      |training   |trn1, inf2                   |3.8 (py38)             |763104351884.dkr.ecr.us-west-2.amazonaws.com/pytorch-training-neuronx:1.13.1-neuronx-py38-sdk2.10.0-ubuntu20.04      |
+
+SageMaker Training Compiler Containers
+===============================
+> Note: SageMaker Training Compiler (SMTC) is being deprecated. We recommend that customers choose an open source deep learning compiler such as TorchDynamo/TorchInductor for PyTorch or XLA for TensorFlow. Existing SageMaker Training Compiler containers will continue to be supported until Jan 2024, but we will not release any new containers. You can learn more about migrating existing SMTC training jobs to other deep learning compilers on this documentation page: https://docs.aws.amazon.com/sagemaker/latest/dg/training-compiler.html.
+
+| Framework                                     |Job Type	|CPU/GPU 	|Python Version Options	|Example URL																						|
+|-----------------------------------------------|-----------|-----------|-----------------------|---------------------------------------------------------------------------------------------------|
+| TensorFlow 2.10.0                              |training   |GPU        | 3.9 (py39)            | 763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-training:2.10.0-gpu-py39-cu112-ubuntu20.04-sagemaker     |
+|PyTorch 1.13.1 with SageMaker Training Compiler    |training	|GPU 		| 3.9 (py39 )			|763104351884.dkr.ecr.us-west-2.amazonaws.com/pytorch-trcomp-training:1.13.1-gpu-py39-cu117-ubuntu20.04-sagemaker     |
+|PyTorch 1.11.0 with HuggingFace transformers 4.21.1 and SageMaker Training Compiler    |training	|GPU 		| 3.8 (py38)			|763104351884.dkr.ecr.us-west-2.amazonaws.com/huggingface-pytorch-trcomp-training:1.11.0-transformers4.21.1-gpu-py38-cu113-ubuntu20.04      |
+
+
+
 
 Prior EC2 Framework Container Versions
 ==============
@@ -382,6 +385,7 @@ Prior AutoGluon Inference Containers
 
 Prior SageMaker Training Compiler Containers
 ===============================
+> Note: SageMaker Training Compiler (SMTC) is being deprecated. We recommend that customers choose an open source deep learning compiler such as TorchDynamo/TorchInductor for PyTorch or XLA for TensorFlow. Existing SageMaker Training Compiler containers will continue to be supported until Jan 2024, but we will not release any new containers. You can learn more about migrating existing SMTC training jobs to other deep learning compilers on this documentation page: https://docs.aws.amazon.com/sagemaker/latest/dg/training-compiler.html.
 
 | Framework                                     |Job Type	|CPU/GPU 	|Python Version Options	|Example URL																						|
 |-----------------------------------------------|-----------|-----------|-----------------------|---------------------------------------------------------------------------------------------------|
